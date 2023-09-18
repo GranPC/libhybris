@@ -13,7 +13,7 @@ jobs:
     steps:
       - run:
           name: "test"
-          command: echo $CIRCLE_REPOSITORY_URL
+          command: env
       - droidian-buildd/checkout
       - droidian-buildd/generate
       - continuation/continue:
