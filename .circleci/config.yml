@@ -11,6 +11,9 @@ jobs:
     executor: continuation/default
     resource_class: small
     steps:
+      - run:
+          name: "test"
+          command: echo $CIRCLE_REPOSITORY_URL
       - droidian-buildd/checkout
       - droidian-buildd/generate
       - continuation/continue:
